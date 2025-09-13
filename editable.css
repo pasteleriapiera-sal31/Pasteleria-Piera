@@ -1,0 +1,502 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #faf7fc;
+    color: #333;
+    text-align: center;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+    background: linear-gradient(135deg, #EBA4FF, #D85BFC);
+    color: white;
+    padding: 60px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ======== MENÚ DE NAVEGACIÓN ======== */
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #7F01A2;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D85BFC;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #7F01A2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* ======== PRODUCTOS / INICIO ======== */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.producto {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #5A0075;
+}
+
+.producto p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.producto button {
+    padding: 12px 20px;
+    background: #D85BFC;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.producto button:hover {
+    background: #7F01A2;
+}
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #D85BFC;
+    margin: 5px 0;
+}
+
+
+/* ======== FORMULARIO ENCARGOS ======== */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #5A0075;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #D85BFC;
+    box-shadow: 0 0 5px rgba(216,91,252,0.5);
+    outline: none;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #D85BFC;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #7F01A2;
+}
+
+.nota {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.mensaje-exito {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e6ffe6;
+    color: #008000;
+    border: 1px solid #b3ffb3;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ======== FAQ ======== */
+.faq {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+}
+
+.faq-item h3 {
+    color: #7F01A2;
+    margin-top: 0;
+}
+
+/* ======== CONTACTO ======== */
+.contact-info {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #D85BFC;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ======== QUIÉNES SOMOS - SECCIÓN PREMIUM ======== */
+.quienes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #fef9fc, #fdf0ff);
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    max-width: 850px;
+    margin: 50px auto;
+    gap: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.quienes-container:hover {
+    transform: translateY(-5px);
+}
+
+.quienes-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #D85BFC;
+    box-shadow: 0 6px 20px rgba(216,91,252,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.quienes-img:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 25px rgba(216,91,252,0.5);
+}
+
+.quienes-info p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.quienes-info .highlight {
+    font-weight: 700;
+    color: #7F01A2;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.iconos-pasteleria {
+    margin-top: 20px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.iconos-pasteleria:hover {
+    opacity: 1;
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+    background: linear-gradient(135deg, #D85BFC, #7F01A2);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+
+/* ======== ANIMACIONES SUAVES ======== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.2s;
+}
+
+.fade-in-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======== HEADER Y NAV STICKY PREMIUM ======== */
+header {
+    background: linear-gradient(135deg, #EBA4FF, #D85BFC);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+/* Cuando se haga scroll se reducirá padding y aparecerá sombra */
+header.scrolled {
+    padding: 20px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 100px; /* debajo del header */
+    z-index: 999;
+    transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #7F01A2;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D85BFC;
+}
+
+/* ======== SCROLL REVEAL ======== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======== BOTÓN FLOTANTE WHATSAPP ======== */
+.whatsapp-float {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float svg {
+    width: 42px;
+    height: 42px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+
+/* Tablet (pantallas medianas) */
+@media (max-width: 1024px) {
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .productos {
+        justify-content: center;
+    }
+
+    .producto {
+        width: 220px;
+    }
+}
+
+/* Móvil (pantallas pequeñas) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
