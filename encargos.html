@@ -21,12 +21,9 @@
     <a href="contactus.html">Contáctanos</a>
 </nav>
 
-
-
-
 <main class="fade-in scroll-reveal">
     <h2>Formulario de Encargo</h2>
-    <form id="encargoForm" class="fade-in-delay scroll-reveal">
+    <form id="encargoForm" class="fade-in-delay scroll-reveal" action="https://formspree.io/f/mwpnzzon" method="POST">
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -59,9 +56,24 @@
 
 <script>
 document.getElementById("encargoForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    this.style.display = "none";
-    document.querySelector(".mensaje-exito").style.display = "block";
+    e.preventDefault(); // evita recargar la página
+    const form = this;
+    const datos = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: datos,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if(response.ok) {
+            form.style.display = "none";
+            document.querySelector(".mensaje-exito").style.display = "block";
+        } else {
+            alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+        }
+    }).catch(error => {
+        alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+    });
 });
 </script>
 
@@ -100,7 +112,6 @@ window.addEventListener('load', revealOnScroll);
 <a href="https://wa.me/34617637837?text=Hola,%20quiero%20hacer%20un%20encargo%20🍰" 
    class="whatsapp-float" target="_blank" 
    title="Chatea con nosotros en WhatsApp">
-   <!-- Icono SVG WhatsApp -->
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="42" height="42" fill="white">
        <path d="M16.003 3.001c-7.167 0-13 5.832-13 12.999 0 2.288.621 4.521 1.804 6.479l-1.922 7.004 
        7.165-1.882c1.873 1.025 3.986 1.563 6.111 1.563h.001c7.167 0 13-5.832 13-12.999s-5.833-13-13-13zm0 
@@ -111,10 +122,5 @@ window.addEventListener('load', revealOnScroll);
    </svg>
 </a>
 
-
 </body>
 </html>
-
-
-
-
